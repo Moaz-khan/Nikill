@@ -3,7 +3,7 @@ export async function fetchJson(input: RequestInfo | URL, init?: RequestInit) {
   try {
     // Automatically route /api requests to Express backend in local development
     if (typeof input === 'string' && input.startsWith('/api') && process.env.NODE_ENV === 'development') {
-      url = `http://localhost:5000${input}`;
+      url = `https://nikill-puce.vercel.app${input}`;
     }
 
     let response: Response;
