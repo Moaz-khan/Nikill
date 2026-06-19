@@ -25,7 +25,7 @@ export default function AddProduct() {
   const [customCategory, setCustomCategory] = useState('');
   const [selectedColors, setSelectedColors] = useState<{name: string, hex: string}[]>([]);
   const [images, setImages] = useState(['', '', '', '']);
-  const [files, setFiles] = useState<(File | null)>([null, null, null, null]);
+  const [files, setFiles] = useState<(File | null)[]>([null, null, null, null]);
   const [isNewArrival, setIsNewArrival] = useState(false);
   const [isOnSale, setIsOnSale] = useState(false);
   const [discountPercent, setDiscountPercent] = useState('');
