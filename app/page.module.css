@@ -1,0 +1,82 @@
+.container {
+  min-height: 100vh;
+  background: var(--background);
+  font-family: 'Outfit', sans-serif;
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  padding: 0;
+}
+
+.section {
+  padding: clamp(60px, 8vw, 100px) var(--container-padding, clamp(16px, 5vw, 40px));
+  max-width: var(--container-max, 1400px);
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(240px, 30vw, 280px), 1fr));
+  gap: clamp(20px, 4vw, 32px);
+}
+
+.card {
+  background: white;
+  border-radius: clamp(20px, 4vw, 32px);
+  padding: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border-color: #FF6B00;
+}
+
+.cardImage {
+  height: clamp(200px, 35vw, 280px);
+  background: #f1f1f1;
+  border-radius: clamp(16px, 3vw, 24px);
+  margin-bottom: 20px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardInfo h3 {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding: 0 12px;
+}
+
+.cardInfo p {
+  color: #FF6B00;
+  font-weight: 700;
+  padding: 0 12px 12px;
+  margin-top: auto;
+}
+
+/* =====================
+   Mobile Breakpoint
+   ===================== */
+@media (max-width: 640px) {
+  .sectionTitle {
+    text-align: center;
+  }
+}

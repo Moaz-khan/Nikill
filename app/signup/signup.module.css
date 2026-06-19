@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Audiowide&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.signupContainer {
+  display: flex;
+  min-height: 100svh;
+  width: 100%;
+  background: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+}
+
+/* Left Side: Image Section */
+.imageSection {
+  flex: 4;
+  background: var(--primary, #FF6B00);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(20px, 4vw, 60px);
+  color: white;
+  overflow: hidden;
+}
+
+.backHome {
+  position: absolute;
+  top: clamp(20px, 4vw, 40px);
+  left: clamp(20px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: clamp(0.85rem, 1.2vw, 0.9rem);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.backHome:hover {
+  color: white;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: clamp(20px, 4vw, 40px);
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.2));
+  animation: float 4s ease-in-out infinite;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: rotate(-10deg);
+}
+
+.imageContent {
+  text-align: center;
+  max-width: 400px;
+}
+
+.imageContent h2 {
+  font-family: 'Audiowide', cursive;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  margin-bottom: 15px;
+}
+
+.imageContent p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Right Side: Form Section */
+.formSection {
+  flex: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(30px, 6vw, 60px);
+  background: #ffffff;
+  overflow-y: auto;
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 480px;
+}
+
+.formHeader {
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.formHeader h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.formHeader p {
+  color: #666;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 3vw, 24px);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.2vw, 0.9rem);
+  color: #1a1a1a;
+}
+
+.inputGroup input {
+  padding: clamp(12px, 2vw, 16px) clamp(16px, 2vw, 20px);
+  border-radius: 12px;
+  border: 1.5px solid #eee;
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+  border-color: var(--primary, #FF6B00);
+  box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.05);
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(0.85rem, 1.2vw, 0.9rem);
+  color: #666;
+  flex-wrap: wrap;
+}
+
+.checkboxGroup span {
+  color: var(--primary, #FF6B00);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitBtn {
+  padding: clamp(14px, 2vw, 18px);
+  background: var(--primary, #FF6B00);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 107, 0, 0.3);
+  background: #e65a00;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: clamp(10px, 2vw, 20px) 0;
+  color: #999;
+  font-size: clamp(0.8rem, 1.2vw, 0.85rem);
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #eee;
+}
+
+.divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: clamp(12px, 2vw, 16px);
+  background: white;
+  color: #1a1a1a;
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.googleBtn:hover {
+  background: #f9f9f9;
+  border-color: #ddd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.formFooter {
+  margin-top: clamp(20px, 4vw, 30px);
+  text-align: center;
+  color: #666;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.formFooter a {
+  color: var(--primary, #FF6B00);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-10deg); }
+  50% { transform: translateY(-20px) rotate(-5deg); }
+}
+
+/* =====================
+   Tablet Breakpoint
+   ===================== */
+@media (max-width: 1024px) {
+  .signupContainer {
+    flex-direction: column;
+    min-height: 100svh;
+    overflow-y: auto;
+  }
+  
+  .imageSection {
+    display: none;
+  }
+  
+  .formSection {
+    flex: 1;
+    padding: clamp(30px, 6vw, 40px) 20px;
+    align-items: flex-start;
+    padding-top: 10vh;
+  }
+}

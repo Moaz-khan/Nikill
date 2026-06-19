@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================
+   Footer Base
+   ===================== */
+.footer {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: clamp(48px, 7vw, 80px) var(--container-padding, clamp(16px, 5vw, 40px)) clamp(24px, 4vw, 40px);
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #f0f0f0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1.5fr;
+  gap: clamp(24px, 4vw, 40px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0; /* prevent overflow */
+}
+
+/* =====================
+   Brand Column
+   ===================== */
+.brandLogo {
+  font-family: 'Audiowide', cursive;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.brandDesc {
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  color: #666;
+  line-height: 1.6;
+  max-width: 250px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.socialIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.socialIcon:hover {
+  background: var(--primary, #FF6B00);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.lordIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+}
+
+.lordIconWrapper:hover {
+  transform: translateY(-3px);
+}
+
+/* =====================
+   Column Headings & Links
+   ===================== */
+.colHeading {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.2vw, 12px);
+}
+
+.link {
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: var(--primary, #FF6B00);
+  padding-left: 5px;
+}
+
+/* =====================
+   Newsletter
+   ===================== */
+.newsletter {
+  background: #fdfdfd;
+  padding: clamp(16px, 2.5vw, 25px);
+  border-radius: 20px;
+  border: 1px solid #f0f0f0;
+}
+
+.newsletterTitle {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.newsletterText {
+  font-size: clamp(0.78rem, 1.1vw, 0.85rem);
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.subscribeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emailInput {
+  width: 100%;
+  padding: clamp(10px, 2vw, 14px) clamp(12px, 2vw, 20px);
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  font-family: inherit;
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.emailInput:focus {
+  border-color: var(--primary, #FF6B00);
+}
+
+.subscribeBtn {
+  width: 100%;
+  padding: clamp(10px, 2vw, 14px);
+  background: var(--primary, #FF6B00);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribeBtn:hover {
+  background: #e65a00;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+}
+
+/* =====================
+   Bottom Bar
+   ===================== */
+.bottomBar {
+  max-width: 1400px;
+  margin: clamp(40px, 6vw, 60px) auto 0;
+  padding-top: clamp(20px, 3vw, 30px);
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.copyright {
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  color: #999;
+}
+
+.paymentIcons {
+  display: flex;
+  gap: clamp(12px, 2vw, 20px);
+  align-items: center;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.paymentIcons:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* =====================
+   Large tablet breakpoint
+   ===================== */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(24px, 4vw, 50px);
+  }
+}
+
+/* =====================
+   Tablet breakpoint
+   ===================== */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(24px, 4vw, 40px);
+  }
+}
+
+/* =====================
+   Mobile breakpoint
+   ===================== */
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .brandDesc {
+    max-width: 100%;
+  }
+}

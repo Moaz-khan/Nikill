@@ -1,0 +1,167 @@
+.container {
+  max-width: var(--container-max, 1200px);
+  margin: 0 auto;
+  padding: clamp(100px, 12vw, 140px) var(--container-padding, clamp(16px, 5vw, 40px)) clamp(40px, 8vw, 80px);
+  min-height: 80vh;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(240px, 30vw, 280px), 1fr));
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.imageContainer {
+  height: clamp(240px, 40vw, 320px);
+  background: #f4f4f4;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: clamp(36px, 5vw, 40px);
+  height: clamp(36px, 5vw, 40px);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #FF3B30;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.removeBtn:hover {
+  background: #FF3B30;
+  color: white;
+  transform: scale(1.1);
+}
+
+.content {
+  padding: clamp(1rem, 2vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category {
+  color: #888;
+  font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  flex-wrap: wrap;
+}
+
+.price {
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  color: var(--foreground);
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.addToCartBtn {
+  width: 100%;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: auto;
+}
+
+.addToCartBtn:hover {
+  background: #e65c00;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.emptyState {
+  text-align: center;
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  grid-column: 1 / -1;
+}
+
+.emptyState p {
+  color: #666;
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  margin-bottom: 2rem;
+}
+
+.continueBtn {
+  display: inline-block;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--foreground);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.continueBtn:hover {
+  background: var(--primary);
+}
+
+/* =====================
+   Mobile Breakpoint
+   ===================== */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

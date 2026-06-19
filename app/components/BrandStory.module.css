@@ -1,0 +1,115 @@
+.brandStory {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  border-radius: 0;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.5) 55%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  color: white;
+  max-width: min(900px, 90vw);
+  padding: clamp(24px, 5vw, 60px) clamp(20px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2.5vw, 24px);
+}
+
+.tagline {
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  color: var(--primary, #FF6B00);
+  font-weight: 600;
+}
+
+.storyParagraph {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 300;
+  min-height: 1.65em;
+  font-family: 'Outfit', sans-serif;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: var(--primary, #FF6B00);
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* =====================
+   Tablet Breakpoint
+   ===================== */
+@media (max-width: 768px) {
+  .brandStory {
+    min-height: 70svh;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
+  .content {
+    padding: clamp(20px, 5vw, 32px);
+    max-width: 100%;
+  }
+}
+
+/* =====================
+   Mobile Breakpoint
+   ===================== */
+@media (max-width: 480px) {
+  .brandStory {
+    min-height: 60svh;
+  }
+
+  .storyParagraph {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+}

@@ -1,0 +1,60 @@
+.logoBar {
+  width: 110%;
+  height: clamp(60px, 8vw, 80px);
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+  transform: rotate(-2deg) translateX(-5%);
+  margin: clamp(-30px, -4vw, -20px) 0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.marquee {
+  display: flex;
+  gap: clamp(40px, 6vw, 80px);
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 12px);
+  color: #ffffff;
+  font-family: 'Audiowide', cursive;
+  font-size: clamp(16px, 2.5vw, 20px);
+  letter-spacing: clamp(1px, 0.2vw, 2px);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.logoItem:hover {
+  opacity: 1;
+  color: #FF6B00;
+}
+
+.dot {
+  width: clamp(4px, 0.8vw, 6px);
+  height: clamp(4px, 0.8vw, 6px);
+  background: #FF6B00;
+  border-radius: 50%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on touch/hover for better UX */
+@media (hover: hover) {
+  .logoBar:hover .marquee {
+    animation-play-state: paused;
+  }
+}
