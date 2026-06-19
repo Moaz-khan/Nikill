@@ -14,7 +14,7 @@ export async function fetchJson(input: RequestInfo | URL, init?: RequestInit) {
       // Fallback for network failures (e.g. backend server is down)
       return (init?.method && init.method !== 'GET') ? { success: false, error: 'Network failure' } : [];
     }
-    
+
     // Check if the response is JSON
     const contentType = response.headers.get("content-type");
     const isJson = contentType && contentType.includes("application/json");

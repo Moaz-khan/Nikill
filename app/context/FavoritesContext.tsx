@@ -16,7 +16,7 @@ export interface FavoriteItem {
 
 interface FavoritesContextType {
   favorites: FavoriteItem[];
-  addToFavorites: (item: Omit<FavoriteItem, 'id'> & { id?: string }) => void;
+  addToFavorites: (item: Omit<FavoriteItem, 'id' | 'productId'> & { id?: string; productId?: string }) => void;
   removeFromFavorites: (productId: string) => void;
   isFavorite: (productId: string) => boolean;
   isAddingFav: boolean;
@@ -61,7 +61,7 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
     fetchFavorites();
   }, [fetchFavorites]);
 
-  const addToFavorites = async (newItem: Omit<FavoriteItem, 'id'> & { id?: string }) => {
+  const addToFavorites = async (newItem: Omit<FavoriteItem, 'id' | 'productId'> & { id?: string; productId?: string }) => {
     setIsAddingFav(true);
     const productId = newItem.productId || newItem.id || '';
 
