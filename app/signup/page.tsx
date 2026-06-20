@@ -5,7 +5,7 @@ import React from 'react';
 import styles from './signup.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Chrome } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 import { useRouter } from 'next/navigation';
 
