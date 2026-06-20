@@ -23,16 +23,15 @@ const nextConfig = {
     ],
   },
   async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        // In production, vercel.json handles the routing to serverless function, or we can route it here too if we want.
-        // But for local dev, we proxy to the running express server on 5000.
-        destination: process.env.NODE_ENV === 'development' 
-          ? 'http://localhost:5000/api/:path*' 
-          : '/server/index.js',
-      },
-    ];
+    if (process.env.NODE_ENV === 'development') {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'http://localhost:5000/api/:path*',
+        },
+      ];
+    }
+    return [];
   },
 };
 

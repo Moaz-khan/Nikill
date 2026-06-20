@@ -25,16 +25,18 @@ const LoginPage = () => {
     const password = formData.get('password') as string;
 
     try {
-      const res = await fetch('/api/auth/login', {
+      const data = await fetchJson('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
       });
 
-      const data = await res.json();
-
-      if (!res.ok) {
+      if (data && data.success === false) {
         throw new Error(data.error || 'Login failed');
+      }
+
+      if (!data || !data.user) {
+        throw new Error('Invalid response from server');
       }
 
       // The full_name could be in user_metadata if stored there, or we fetch from profile.

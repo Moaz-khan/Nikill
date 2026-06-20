@@ -26,7 +26,7 @@ const SignupPage = () => {
     const password = formData.get('password') as string;
     
     try {
-      const res = await fetch('/api/auth/signup', {
+      const data = await fetchJson('/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -34,10 +34,12 @@ const SignupPage = () => {
         body: JSON.stringify({ email, full_name, password })
       });
 
-      const data = await res.json();
-
-      if (!res.ok) {
+      if (data && data.success === false) {
         throw new Error(data.error || 'Signup failed');
+      }
+
+      if (!data || (!data.user && !data.session)) {
+        throw new Error('Invalid response from server');
       }
 
       // Supabase signup might not return a session immediately depending on config,
