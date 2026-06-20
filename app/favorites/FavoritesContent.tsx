@@ -13,7 +13,6 @@ export default function FavoritesContent() {
     return (
       <div className={styles.container}>
         <div className={styles.emptyState}>
-          {/* @ts-ignore */}
           <lord-icon
               src="https://cdn.lordicon.com/nvsfzbop.json"
               trigger="loop"

@@ -95,8 +95,7 @@ const Navbar = () => {
                 onMouseLeave={() => setIsSearchHovered(false)}
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
               >
-                {/* @ts-ignore */}
-                <lord-icon
+          <lord-icon
                     src="https://cdn.lordicon.com/swqyihda.json"
                     trigger="hover"
                     state="hover-dates"
@@ -114,8 +113,7 @@ const Navbar = () => {
               onMouseLeave={() => setIsWishlistHovered(false)}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              {/* @ts-ignore */}
-              <lord-icon
+          <lord-icon
                   src="https://cdn.lordicon.com/nvsfzbop.json"
                   trigger="hover"
                   state="morph-glitter"
@@ -133,8 +131,7 @@ const Navbar = () => {
               onMouseEnter={() => setIsCartHovered(true)}
               onMouseLeave={() => setIsCartHovered(false)}
             >
-              {/* @ts-ignore */}
-              <lord-icon
+          <lord-icon
                   src="https://cdn.lordicon.com/uisoczqi.json"
                   trigger="hover"
                   stroke="bold"
@@ -185,8 +182,7 @@ const Navbar = () => {
                   onMouseLeave={() => setIsUserHovered(false)}
                   style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 >
-                  {/* @ts-ignore */}
-                  <lord-icon
+          <lord-icon
                       src="https://cdn.lordicon.com/kdduutaw.json"
                       trigger="hover"
                       state="hover-looking-around"

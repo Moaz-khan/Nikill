@@ -24,8 +24,7 @@ const Footer: React.FC = () => {
               onMouseEnter={() => setHoveredIcon('fb')}
               onMouseLeave={() => setHoveredIcon(null)}
             >
-              {/* @ts-ignore */}
-              <lord-icon
+          <lord-icon
                 src="https://cdn.lordicon.com/cxauoejw.json"
                 trigger="hover"
                 state="hover-draw"
@@ -39,8 +38,7 @@ const Footer: React.FC = () => {
               onMouseEnter={() => setHoveredIcon('ig')}
               onMouseLeave={() => setHoveredIcon(null)}
             >
-              {/* @ts-ignore */}
-              <lord-icon
+          <lord-icon
                 src="https://cdn.lordicon.com/tgyvxauj.json"
                 trigger="hover"
                 state="hover-rotate"
@@ -54,8 +52,7 @@ const Footer: React.FC = () => {
               onMouseEnter={() => setHoveredIcon('tw')}
               onMouseLeave={() => setHoveredIcon(null)}
             >
-              {/* @ts-ignore */}
-              <lord-icon
+          <lord-icon
                 src="https://cdn.lordicon.com/yizwahhw.json"
                 trigger="hover"
                 state="hover-draw"
@@ -69,8 +66,7 @@ const Footer: React.FC = () => {
               onMouseEnter={() => setHoveredIcon('yt')}
               onMouseLeave={() => setHoveredIcon(null)}
             >
-              {/* @ts-ignore */}
-              <lord-icon
+          <lord-icon
                 src="https://cdn.lordicon.com/japmxdiq.json"
                 trigger="hover"
                 stroke="bold"

@@ -40,7 +40,6 @@ export default function CartContent() {
     return (
       <div className={styles.container}>
         <div className={styles.emptyCart}>
-          {/* @ts-ignore */}
           <lord-icon
               src="https://cdn.lordicon.com/uisoczqi.json"
               trigger="loop"
